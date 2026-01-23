@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/message/message",
+    "pages/contact/contact",
+    "pages/index/index",  
+    "pages/test/test",
+    "pages/logs/logs",
+    "pages/list/list"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "这还说啥了",
+    "navigationBarBackgroundColor":"#2b4b6b",
+    "backgroundColor": "#666666",
+    "backgroundTextStyle":"dark",
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "list":[
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/images/index.png",
+        "selectedIconPath": "/images/index-active.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "/images/list.png",
+        "selectedIconPath": "/images/list-active.png"
+      },
+      {
+        "pagePath": "pages/contact/contact",
+        "text": "联系我们",
+        "iconPath": "/images/page.png",
+        "selectedIconPath": "/images/page-active.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "index"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "list"
+      }
+    ]
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
