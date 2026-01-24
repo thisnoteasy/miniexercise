@@ -35,14 +35,6 @@
         "text": "联系我们",
         "iconPath": "/images/page.png",
         "selectedIconPath": "/images/page-active.png"
-      },
-      {
-        "pagePath": "pages/index/index",
-        "text": "index"
-      },
-      {
-        "pagePath": "pages/list/list",
-        "text": "list"
       }
     ]
   },

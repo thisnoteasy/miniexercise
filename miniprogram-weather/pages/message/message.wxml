@@ -1,2 +1,10 @@
 <!--pages/message/message.wxml-->
-<text>pages/message/message.wxml</text>
+<navigator url="/pages/home/home" open-type="switchTab">导航到首页</navigator>
+<navigator url="/pages/index/index" open-type="navigate">导航到index页面</navigator>
+<button bindtap="gotoHome">跳转到home页面</button>
+<button bind:tap="gotoIndex">跳转到index页面</button>
+<navigator url="/pages/index/index?name=zs&agrave=20">跳转到index页面</navigator>
+<button bind:tap="gotoIndex2">跳转到index页面</button>
+<view>---------------------------------------------</view>
+<view>count的值是：{{count}}</view>
+<button bind:tap="addcount">+1</button>

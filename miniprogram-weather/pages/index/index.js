@@ -19,6 +19,8 @@ Page({
      { id: 2,name: 'bb'},
      { id: 3,name: 'cc'}
      ],
+     //导航传递过来的参数
+     query:{}
   },
   //定义按钮事件
   btnTapHandler(e) {
@@ -43,11 +45,17 @@ Page({
       msg:e.detail.value,
     })
   },
+  goBack() {
+    wx.navigateBack()
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+     console.log(options)
+     this.setData({
+      query:options
+     })
   },
 
   /**

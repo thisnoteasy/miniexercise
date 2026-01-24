@@ -9,15 +9,15 @@ Page({
   },
   //发起get请求
       getInfo() {
-        const yourToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJ0ZXN0VXNlciIsImlhdCI6MTcwNjA2NzYwMCwiZXhwIjoxNzA2MTU0MDAwfQ.7Z8n9X8s7k7s8d7f8s7d8f7s8d7f8s7d8f7s8d7f8s7d8f';
+        const yourToken = 'oQJMjILXrSlnDHsNIRbmCWODFqjgZAdhNhPwrTtvJxlCahxtVUyDkRHGqQTfvAvhuaKsAIFOUOJdmEkDnCKTYUtnCEpfOqPGopLCIazBadtHyHoXNhoTpjVfebLPkFrP';
         wx.request({
-          url: 'http://127.0.0.1:4523/m1/6227997-5921626-85c8cd6b/diaries/favorites/count',
+          url: 'https://api.xingshi.site/social-service/chat/sessions',
           method: 'GET',
           header: {
             'Authorization': 'Bearer ' + yourToken // 替换成你的 Token
           },
           success: (res) => {
-            console.log(res.data)
+            console.log(res)
           },
           fail: (err) => {
             console.error('请求失败：', err)
@@ -25,15 +25,15 @@ Page({
         })
       },
   postInfo() {
-    const yourToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJ0ZXN0VXNlciIsImlhdCI6MTcwNjA2NzYwMCwiZXhwIjoxNzA2MTU0MDAwfQ.7Z8n9X8s7k7s8d7f8s7d8f7s8d7f8s7d8f7s8d7f8s7d8f';
+    const yourToken = 'oQJMjILXrSlnDHsNIRbmCWODFqjgZAdhNhPwrTtvJxlCahxtVUyDkRHGqQTfvAvhuaKsAIFOUOJdmEkDnCKTYUtnCEpfOqPGopLCIazBadtHyHoXNhoTpjVfebLPkFrP';
     wx.request({
-      url: "http://127.0.0.1:4523/m1/6227997-5921626-dac25b43/cards",
+      url: "https://api.xingshi.site/cards-service/cards",
       method: "POST",
       header: {
         'Authorization': 'Bearer ' + yourToken // 替换成你的 Token
       },
       success: (res) => {
-        console.log(res.data)
+        console.log(res)
       }
     })
   },

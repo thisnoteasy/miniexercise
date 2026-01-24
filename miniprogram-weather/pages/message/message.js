@@ -5,9 +5,29 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    count: 0
   },
-
+//通过编程式导航跳转tabBar页面
+gotoHome() {
+   wx.switchTab({
+    url: '/pages/home/home'
+   })
+},
+gotoIndex() {
+  wx.navigateTo({
+    url: '/pages/index/index',
+  })
+},
+gotoIndex2() {
+  wx.navigateTo({
+    url:'/pages/index/index?name=ls&age=10'
+  })
+},
+addcount() {
+  this.setData({
+    count: this.data.count + 1
+  })
+},
   /**
    * 生命周期函数--监听页面加载
    */
@@ -47,7 +67,11 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh() {
-
+    console.log('触发了message的下拉刷新')
+    this.setData({
+      count:0
+    })
+    wx.stopPullDownRefresh()
   },
 
   /**

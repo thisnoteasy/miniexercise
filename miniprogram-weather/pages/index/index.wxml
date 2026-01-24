@@ -22,3 +22,5 @@
 <view wx:for="{{arr1}}" wx:for-index="idx" wx:for-item="it">索引是：{{ idx }}，item是{{ it }}</view>
 <view>-------------------</view>
 <view wx:for="{{userList}}" wx:key="id" class="username">{{item.name}}</view>
+<navigator open-type="navigateBack" delta="1">后退</navigator>
+<button bind:tap="goBack">后退</button>
