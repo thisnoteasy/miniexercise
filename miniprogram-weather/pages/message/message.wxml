@@ -8,3 +8,4 @@
 <view>---------------------------------------------</view>
 <view>count的值是：{{count}}</view>
 <button bind:tap="addcount">+1</button>
+<view class="box"></view>

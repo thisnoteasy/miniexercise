@@ -1,34 +1,14 @@
 <!--pages/list/list.wxml-->
-<scroll-view class="container1" scroll-y>
-  <view>A</view>
-  <view>B</view>
-  <view>C</view>
-</scroll-view> -->
-<!-- 轮播图结构 swiper轮播容器 swiper-item轮播元素 -->
-<swiper class="swiper-container">
-  <swiper-item>
-    <view class="item">A</view>
-  </swiper-item>
-  <swiper-item>
-    <view class="item">B</view>
-  </swiper-item>
-  <swiper-item>
-    <view class="item">C</view>
-  </swiper-item>
-</swiper>
-<view>
-手机号支持长按选中效果
-  <text selectable>11111111111111</text>
+<view class="shop-item" wx:for="{{shopList}}" wx:key="id">
+   <view class="thumb">
+     <image src="{{item.images[0]}}" mode=""></image>
+   </view>
+   <view class="info">
+     <text class="shop-title">{{item.name}}</text>
+     <text>电话：{{tools.splitPhone(item.phone)}}</text>
+     <text>地址：{{item.address}}</text>
+     <text>营业：{{item.businessHours}}</text>
+   </view>
 </view>
-<rich-text nodes="<h1 style='color: red;'>标题</h1>"></rich-text> -->
-<button>默认按钮</button>
-<button type="primary">主色调按钮</button>
-<button type="warn">警告按钮</button>
-<button size="mini">默认按钮</button>
-<button type="primary" size="mini">主色调按钮</button>
-<button type="warn" size="mini">警告按钮</button>
-<button size="mini" plain>默认按钮</button>
-<button type="primary" size="mini" plain>主色调按钮</button>
-<button type="warn" size="mini" plain>警告按钮</button>
-<image></image>
-<image src="/images/1.jpg" mode="aspectFill"></image>
+
+<wxs src="/utils/tools.wxs" module="tools"></wxs>

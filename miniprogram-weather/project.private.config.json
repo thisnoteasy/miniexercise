@@ -18,5 +18,25 @@
     "checkInvalidKey": true,
     "ignoreDevUnusedFiles": true
   },
-  "libVersion": "3.14.0"
+  "libVersion": "3.14.0",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/list/list",
+          "pathName": "pages/list/list",
+          "query": "id=1&title=%E7%BE%8E%E9%A3%9F",
+          "scene": null,
+          "launchMode": "default"
+        },
+        {
+          "name": "联系我们",
+          "pathName": "pages/contact/contact",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  }
 }

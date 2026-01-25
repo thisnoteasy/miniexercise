@@ -5,35 +5,30 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    image:[],
+    list: []
   },
-  //发起get请求
-      getInfo() {
-        const yourToken = 'oQJMjILXrSlnDHsNIRbmCWODFqjgZAdhNhPwrTtvJxlCahxtVUyDkRHGqQTfvAvhuaKsAIFOUOJdmEkDnCKTYUtnCEpfOqPGopLCIazBadtHyHoXNhoTpjVfebLPkFrP';
-        wx.request({
-          url: 'https://api.xingshi.site/social-service/chat/sessions',
-          method: 'GET',
-          header: {
-            'Authorization': 'Bearer ' + yourToken // 替换成你的 Token
-          },
-          success: (res) => {
-            console.log(res)
-          },
-          fail: (err) => {
-            console.error('请求失败：', err)
-          }
+  getPicture() {
+    wx.request({
+      url: 'https://applet-base-api-t.itheima.net/slides',
+      method: 'GET',
+      success: (res) => {
+        console.log(res.data)
+        this.setData({
+          image: res.data
         })
       },
-  postInfo() {
-    const yourToken = 'oQJMjILXrSlnDHsNIRbmCWODFqjgZAdhNhPwrTtvJxlCahxtVUyDkRHGqQTfvAvhuaKsAIFOUOJdmEkDnCKTYUtnCEpfOqPGopLCIazBadtHyHoXNhoTpjVfebLPkFrP';
+    })
+  },
+  getGoods() {
     wx.request({
-      url: "https://api.xingshi.site/cards-service/cards",
-      method: "POST",
-      header: {
-        'Authorization': 'Bearer ' + yourToken // 替换成你的 Token
-      },
-      success: (res) => {
-        console.log(res)
+      url:'https://applet-base-api-t.itheima.net/categories',
+      method:'GET',
+      success:(res) => {
+        console.log(res.data)
+        this.setData({
+          list: res.data
+        })
       }
     })
   },
@@ -41,8 +36,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-     this.getInfo()
-     this.postInfo()
+    this.getPicture()
+    this.getGoods()
   },
 
   /**

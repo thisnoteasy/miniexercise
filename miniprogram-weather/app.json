@@ -3,17 +3,15 @@
     "pages/home/home",
     "pages/message/message",
     "pages/contact/contact",
+    "pages/list/list",
     "pages/index/index",  
     "pages/test/test",
-    "pages/logs/logs",
-    "pages/list/list"
+    "pages/logs/logs"
   ],
   "window": {
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "这还说啥了",
+    "navigationBarTitleText": "本地生活",
     "navigationBarBackgroundColor":"#2b4b6b",
-    "backgroundColor": "#666666",
-    "backgroundTextStyle":"dark",
     "onReachBottomDistance": 50
   },
   "tabBar": {

@@ -1,4 +1,16 @@
 <!--pages/home/home.wxml-->
-<button bind:tap="getInfo">发起get请求</button>
-<view>---------------------------------------------</view>
-<button bind:tap="postInfo">发起post请求</button>
+<swiper class="swiper-container" indicator-dots autoplay circular>
+  <swiper-item wx:for="{{image}}" wx:key="id">
+    <image class="item" src="{{item.image}}"></image>
+  </swiper-item>
+</swiper>
+<view class="all-list">
+  <navigator class="list-item" wx:for="{{list}}" wx:key="id"  url="/pages/list/list?id={{item.id}}&title={{item.name}}">
+    <image src="{{item.icon}}" mode=""></image>
+    <text>{{item.name}}</text>
+  </navigator>
+</view>
+<view class="img-box">
+  <image src="/images/list-active.png" mode="widthFix"></image>
+  <image src="/images/page-active.png" mode="widthFix"></image>
+</view>
