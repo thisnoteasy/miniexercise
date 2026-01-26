@@ -5,7 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    count: 0
+  },
+  syncCount(e) {
+    console.log('syncCount')
+    console.log(e.detail.value)
+    this.setData({
+      count: e.detail.value
+    })
+  },
+  getChild() {
+    const child = this.selectComponent('.customA')
+    console.log(child)
+    child.setData({
+      count: child.properties.count + 1
+    })
+    child.addCount()
   },
   /**
    * 生命周期函数--监听页面加载
