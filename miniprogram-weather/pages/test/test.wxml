@@ -1,3 +1,2 @@
 <!--pages/test/test.wxml-->
-<view>123</view>
-<view>123</view>
+<text>pages/test/test.wxml</text>

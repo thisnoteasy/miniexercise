@@ -1,2 +1,1 @@
 <!--pages/contact/contact.wxml-->
-<view wx:for="{{colorList}}" wx:key="id" class="num-item" style="background-color: rgb({{item.color}});" bind:tap="onPullDownRefresh">{{item.color}}</view> 

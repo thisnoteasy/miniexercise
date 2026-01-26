@@ -1,26 +1,2 @@
-<!--index.wxml-->
-<!-- <view>{{ info }}</view>
-<image src="{{ image }}" mode="widthFix"></image>
-<view>{{randomNum1 >= 5 ? '数字大于等于5' : '数字小于5'}}</view>
-<view>{{ randomNum2 * 100 }}</view> -->
-<!-- 事件绑定 -->
-<!-- <button type="primary" bindtap="btnTapHandler">按钮</button>
-<button type="primary" bindtap="changeCount">+1</button>
-<button type="primary" bindtap="bindtap2" data-info="{{2}}">+2</button>
-<input value="{{ msg }}" bindinput="inputHandler"></input> -->
-<!-- <view wx:if="{{type === 1}}">男</view>
-<view wx:elif="{{type === 2}}">女</view>
-<view wx:else>保密</view> -->
-<!-- <block wx:if="{{true}}">
-  <view>view1</view>
-  <view>view2</view>
-</block> -->
-<!-- <view hidden="{{!flag}}">条件为true隐藏，否则显示</view>
-<view wx:if="{{flag}}">这是使用wx：if</view> -->
-<view wx:for="{{arr1}}">索引是：{{ index }}，item是{{ item }}</view>
-<view>-------------------</view>
-<view wx:for="{{arr1}}" wx:for-index="idx" wx:for-item="it">索引是：{{ idx }}，item是{{ it }}</view>
-<view>-------------------</view>
-<view wx:for="{{userList}}" wx:key="id" class="username">{{item.name}}</view>
-<navigator open-type="navigateBack" delta="1">后退</navigator>
-<button bind:tap="goBack">后退</button>
+<!--pages/index/index.wxml-->
+<text>pages/index/index.wxml</text>

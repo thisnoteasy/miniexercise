@@ -39,5 +39,11 @@
   "style": "v2",
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
-  "lazyCodeLoading": "requiredComponents"
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {
+    "my-test1":"/components/test/test",
+    "my-test2":"/components/test2/test2",
+    "my-test3":"/components/test3/test3",
+    "my-test4":"/components/test4/test4"
+  }
 }

@@ -5,39 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    image:[],
-    list: []
-  },
-  getPicture() {
-    wx.request({
-      url: 'https://applet-base-api-t.itheima.net/slides',
-      method: 'GET',
-      success: (res) => {
-        console.log(res.data)
-        this.setData({
-          image: res.data
-        })
-      },
-    })
-  },
-  getGoods() {
-    wx.request({
-      url:'https://applet-base-api-t.itheima.net/categories',
-      method:'GET',
-      success:(res) => {
-        console.log(res.data)
-        this.setData({
-          list: res.data
-        })
-      }
-    })
+    
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    this.getPicture()
-    this.getGoods()
+    
   },
 
   /**
