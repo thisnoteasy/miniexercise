@@ -23,9 +23,9 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/list/list",
-          "pathName": "pages/list/list",
-          "query": "id=1&title=%E7%BE%8E%E9%A3%9F",
+          "name": "pages/message/message",
+          "pathName": "pages/message/message",
+          "query": "",
           "scene": null,
           "launchMode": "default"
         },

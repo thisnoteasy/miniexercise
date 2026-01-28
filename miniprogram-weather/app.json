@@ -2,11 +2,31 @@
   "pages": [
     "pages/home/home",
     "pages/message/message",
-    "pages/contact/contact",
-    "pages/list/list",
-    "pages/index/index",  
-    "pages/test/test",
-    "pages/logs/logs"
+    "pages/contact/contact"
+  ],
+  "preloadRule": {
+    "pages/contact/contact": {
+      "packages": ["pkgA"],
+      "network": "all"
+    }
+  },
+  "subpackages": [
+    {
+      "root": "pkgA",
+      "name": "p1",
+      "pages": [
+        "pages/cat/cat",
+        "pages/dog/dog"
+      ]
+    },
+    {
+      "root": "pkgB",
+      "name": "p2",
+      "pages": [
+        "pages/apple/apple"
+      ],
+      "independent": true
+    }
   ],
   "window": {
     "navigationBarTextStyle": "white",
@@ -36,15 +56,11 @@
       }
     ]
   },
-  "style": "v2",
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents",
   "usingComponents": {
-    "my-test1":"/components/test/test",
-    "my-test2":"/components/test2/test2",
-    "my-test3":"/components/test3/test3",
-    "my-test4":"/components/test4/test4",
-    "my-test5":"/components/test5/test5"
+    "van-button": "miniprogram_npm/@vant/weapp/button",
+    "my-numbers": "/components/numbers/numbers"
   }
 }

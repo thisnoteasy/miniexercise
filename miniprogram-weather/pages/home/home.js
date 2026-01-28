@@ -7,6 +7,17 @@ Page({
   data: {
     count: 0
   },
+  async getInfo() {
+    const {data: res} = await wx.p.request({
+      methods: 'get',
+      url: 'https://applet-base-api-t.itheima.net/api/get',
+      data: {
+        name: 'za',
+        age: 20
+      }
+    })
+    console.log(res)
+  },
   syncCount(e) {
     console.log('syncCount')
     console.log(e.detail.value)
