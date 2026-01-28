@@ -35,6 +35,7 @@
     "onReachBottomDistance": 50
   },
   "tabBar": {
+    "custom": true, 
     "list":[
       {
         "pagePath": "pages/home/home",
@@ -61,6 +62,8 @@
   "lazyCodeLoading": "requiredComponents",
   "usingComponents": {
     "van-button": "miniprogram_npm/@vant/weapp/button",
-    "my-numbers": "/components/numbers/numbers"
+    "my-numbers": "/components/numbers/numbers",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index"
   }
 }
