@@ -143,9 +143,9 @@
 			},
 			_onBlur(event) {
 				this.$emit('blur', event)
-				let value = event.detail.value;
-				if (isNaN(value)) {
-					this.inputValue = this.value;
+				let value = parseInt(event.detail.value);
+				if (!value) {
+					this.inputValue = 1;
 					return;
 				}
 				value = +value;
